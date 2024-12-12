@@ -1,6 +1,6 @@
 # Ejercicios
 
-Ejercicio clase y review (Funciones):
+**_Ejercicio clase y review (Funciones):_**
 
 Escribir una función que reciba un número entero positivo y devuelva su factorial.
 
@@ -14,4 +14,4 @@ Escribir un programa que reciba una cadena de caracteres e imprima el tamaño de
 
 Crea una función que ordene y retorne una lista o vector de números. La función recibirá un listado (por ejemplo [2, 4, 6, 8, 9]) y un parámetro adicional "Asc" o "Desc" para indicar si debe ordenarse de menor a mayor o de mayor a menor.  No se pueden utilizar funciones incorporadas que lo resuelvan automáticamente.
 
-Dado un listado de números, encuentra el SEGUNDO más grande
+Dado un listado de números, encuentra el SEGUNDO más grande.
