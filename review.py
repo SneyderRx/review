@@ -1,15 +1,14 @@
-import math
+# Escribir una función que calcule el total de una factura tras aplicarle el IVA. La función debe recibir la cantidad sin IVA y el porcentaje de IVA a aplicar, y devolver el total de la factura. Si se invoca la función sin pasarle el porcentaje de IVA, deberá aplicar un 21%.
 
-#num = int(input("Escriba un número: "))
+v = int(input("Ingrese el valor a pagar: "))
+i = int(input("Ingrese el IVA a aplicar: "))
 
-def factorial(n, m): #Si se usan dos parámetros en la función, para ingresar se necesitan dos parámetros.
-    nf = math.factorial(n)
-    mf = math.sqrt(m)
-    print(nf)
-    print(mf)
+def factura():
+    iva = v * (i / 100)
+    iva21 = v * 0.21
 
-#factorial(num) No ingresará a la función porque se neceitan dos parámetros.
-factorial(5, 30)
-# factorial(15) Se puede pasar el parametro inmediatamente
-# print(factorial(15)) Se puede imprimir desde afuera si se retorna la variable "return"
-# valor = factorial(20) Se puede guardar el valor en una variable si se pone un "return" en la función 
+    fac = v + iva if i else v + iva21 # Evaluo si "i" tiene valor, lo que retornaría "True" o si es "0" retornará "False".
+    
+    print(f"El total de su factura es: {fac}")
+
+factura()
