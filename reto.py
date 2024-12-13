@@ -39,27 +39,28 @@ simbolos = ["!", "$", "&", "%"]
 def contraseña():
     i = 0
 
-    a = random.randint(0, 27)
-    b = random.randint(0, 9)
-    c = random.randint(0, 4)
+    a = random.randint(0, 26)
+    b = random.randint(0, 8)
+    c = random.randint(0, 3)
 
-    for i in long:
+    for i in range(long - y):
+        y = 0
         if mayus:
             datomayus = mayusculas[a]
             cont.append(datomayus)
-            i += 1
-        elif minus:
+            y += 1
+        if minus:
             datosminus = minusculas[a]
             cont.append(datosminus)
-            i += 1
-        elif calf:
+            y += 1
+        if calf:
             datoscalf = numeros[b]
             cont.append(datoscalf)
-            i += 1
-        elif simb:
+            y += 1
+        if simb:
             datossimb = simbolos[c]
             cont.append(datossimb)
-            i +=1
+            y += 1
     
     print(cont)
 
