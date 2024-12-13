@@ -43,24 +43,24 @@ def contraseña():
     b = random.randint(0, 8)
     c = random.randint(0, 3)
 
-    for i in range(long - y):
-        y = 0
+    for i in range(long):
+        i = 0
         if mayus:
             datomayus = mayusculas[a]
             cont.append(datomayus)
-            y += 1
+            i += 1
         if minus:
             datosminus = minusculas[a]
             cont.append(datosminus)
-            y += 1
+            i += 1
         if calf:
             datoscalf = numeros[b]
             cont.append(datoscalf)
-            y += 1
+            i += 1
         if simb:
             datossimb = simbolos[c]
             cont.append(datossimb)
-            y += 1
+            i += 1
     
     print(cont)
 
