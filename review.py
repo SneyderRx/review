@@ -1,14 +1,19 @@
-# Escribir una función que calcule el total de una factura tras aplicarle el IVA. La función debe recibir la cantidad sin IVA y el porcentaje de IVA a aplicar, y devolver el total de la factura. Si se invoca la función sin pasarle el porcentaje de IVA, deberá aplicar un 21%.
+# Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un cilindro usando la primera función.
 
-v = int(input("Ingrese el valor a pagar: "))
-i = int(input("Ingrese el IVA a aplicar: "))
+import math
 
-def factura():
-    iva = v * (i / 100)
-    iva21 = v * 0.21
+r = float(input("Ingrese el radio del círculo: "))
+h = float(input("Ingrese la altura del cilindro: "))
 
-    fac = v + iva if i else v + iva21 # Evaluo si "i" tiene valor, lo que retornaría "True" o si es "0" retornará "False".
-    
-    print(f"El total de su factura es: {fac}")
+def area(r):
+    global a
+    a = 3.1416 * math.pow(r,2)
+    print(f"El área del círculo es {a}")
+    volumen(a)
 
-factura()
+def volumen(a):
+    vol = a * h
+    print(f"El volumen del cilindro es {vol}")
+
+area(r)
+#volumen(h) El error de imprimir dos veces es porque area() ya imprime volumen() y yo la volvía a llamar.
