@@ -18,16 +18,28 @@ for i in range(2,lim):
         else:
             listnumnp.append(n)
 
-for i in range(2,len(npri)):
-    s = i + 1
-    if s < len(npri):
-        n1 = npri[i]
-        n2 = npri[s]
+#Encuentra números primos gemelos
+# for i in range(2,len(npri)):
+#     s = i + 1
+#     if s < len(npri):
+#         n1 = npri[i]
+#         n2 = npri[s]
 
-    if n2 - n1 == 2:
-        print(f"Números primos gemelos: {n1} {n2}")
+#     if n2 - n1 == 2:
+#         print(f"Números primos gemelos: {n1} {n2}")
 
+strnp = str(npri)
+invstrnp = strnp[::-1]
+print(npri)
+print(strnp)
+print(invstrnp)
 
-print(f"Números no primos: {listnumnp}")
-print(f"Números primos: {npri}")
-print(f"Números ingresados: {listnum}")
+    
+for i in range(len(npri)):
+   if npri[i] == strnp[i]:
+    listp = npri[i]
+    print(listp)
+
+# print(f"Números no primos: {listnumnp}")
+# print(f"Números primos: {npri}")
+# print(f"Números ingresados: {listnum}")
