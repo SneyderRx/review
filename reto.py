@@ -31,36 +31,44 @@ print("4. Incluir simbolos")
 simb = bool(int(input("Desea incluir simbolos?: 1. si - 0. no ")))
 
 cont = []
+longcont = long - 1
 mayusculas = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 minusculas = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 simbolos = ["!", "$", "&", "%"]
 
 def contraseña():
-    i = 0
 
-    a = random.randint(0, 26)
-    b = random.randint(0, 8)
-    c = random.randint(0, 3)
+    for i in range(longcont): #Este i vale la última i pero resetea el valor y si es el segundo ciclo for, i valdrá 1, osea, 0 del primer ciclo mas 1 del segundo ciclo.
 
-    for i in range(long):
-        i = 0
+        a = random.randint(0, 26)
+        b = random.randint(0, 8)
+        c = random.randint(0, 3)
+
         if mayus:
             datomayus = mayusculas[a]
             cont.append(datomayus)
             i += 1
+        if i == longcont:
+            break
         if minus:
             datosminus = minusculas[a]
             cont.append(datosminus)
             i += 1
+        if i == longcont:
+            break
         if calf:
             datoscalf = numeros[b]
             cont.append(datoscalf)
             i += 1
+        if i == longcont:
+            break
         if simb:
             datossimb = simbolos[c]
             cont.append(datossimb)
             i += 1
+        if i == longcont:
+            break
     
     print(cont)
 
